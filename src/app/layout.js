@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import Navbar from "@/components/Navbar";
   
 
 const inter = Inter({ subsets: ["latin"] });
@@ -15,7 +16,7 @@ export default function RootLayout({ children }) {
 
     <html lang="en">
       <body className={inter.className}>
-        <nav style={{width: '100%',
+        {/* <nav style={{width: '100%',
          background: 'teal',
           fontSize: '20px',
            height: '80px',
@@ -26,11 +27,12 @@ export default function RootLayout({ children }) {
           <Link style={{margin: '8px'}}  href="/">Home </Link>
           <Link style={{margin: '8px'}}  href="/actors">Actors </Link>
           <Link style={{margin: '8px'}} href="/genre">Genre </Link>
-          <Link style={{margin: '8px'}} href="/movies">Movies </Link>
+          <Link className=" bg-red-500" href="/movies">Movies </Link>
            
-        </nav>
-        
-        {children}</body>
+        </nav> */}
+        <Navbar/>
+        {children}
+        </body>
  
     </html>
   );
