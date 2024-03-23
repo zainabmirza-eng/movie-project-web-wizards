@@ -19,18 +19,14 @@ export default async function CastList({ id }) {
                 directorName = 'Director not found';
             }
         }
-
+        const uniqueCasts = [...new Set(casts)]; // Remove duplicates from casts array
         return (
             <div className="casts">
-                {casts.map((item, i) => (
-                    <div key={i} className="casts__item">
-                        <div
-                            className="casts__item__img"
-                            style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w500${item.profile_path})` }}
-                        ></div>
-                        <p className="casts__item__name">{item.name}</p>
-                    </div>
-                ))}
+                        <div className="flex flex-wrap gap-2">
+                            {uniqueCasts.map((item, i) => (
+                        <a key={i} href={`#`} className="text-gray-900 bg-gradient-to-r from-blue-200 to-gray-200 hover:bg-gradient-to-l hover:from-blue-200 hover:to-gray-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-sm px-5 py-1.5 text-center mb-2">{item.name}</a>
+                            ))}
+                        </div>
                 <p>Director: {directorName}</p>
             </div>
         );
