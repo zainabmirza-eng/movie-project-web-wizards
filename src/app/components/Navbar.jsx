@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { IoIosArrowUp } from "react-icons/io";
+// import { IoIosArrowUp } from "react-icons/io";
  export default function Navbar()
 {
     return(
@@ -17,7 +17,7 @@ import { IoIosArrowUp } from "react-icons/io";
                 <Link href="/genre" className=" relative group px-3 py-4 translate-all">
                 <p className="flex cursor-pointer items-center gap-2 text-neutral-600 group-hover:text-black">
                 <span>Genre</span>
-                <IoIosArrowUp className="rotate-180 translate-all group-hover:rotate-0"/>
+                {/* <IoIosArrowUp className="rotate-180 translate-all group-hover:rotate-0"/> */}
 
                 {/* dropdown */}
                 <div className="absolute top-10 hidden w-auto flex-col gap-1 rounded-lg bg-white py3 shadow-md
@@ -33,7 +33,7 @@ import { IoIosArrowUp } from "react-icons/io";
                 <Link href="/dropMovies" className=" relative group px-3 py-4 translate-all">
                 <p className="flex cursor-pointer items-center gap-2 text-neutral-600 group-hover:text-black">
                 <span>Movies</span>
-                <IoIosArrowUp className="rotate-180 translate-all group-hover:rotate-0"/>
+                {/* <IoIosArrowUp className="rotate-180 translate-all group-hover:rotate-0"/> */}
 
                 {/* dropdown */}
                 <div className="absolute top-10 hidden w-auto flex-col gap-1 rounded-lg bg-white py3 shadow-md
