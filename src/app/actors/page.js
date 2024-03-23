@@ -1,6 +1,7 @@
 
 'use client'
 
+import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 
 export default function Actors() {
@@ -27,19 +28,22 @@ export default function Actors() {
         gap: '20px',  
       }}>
         {actors.map((actor) => (
-          <div key={actor.id} style={{
+         <Link key={actor.id} href={`./actors/${actor.id}`} >
+         <div key={actor.id} style={{
             backgroundColor: 'lavender', 
             boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', 
             borderRadius: '8px',  
             padding: '20px', 
             width: '200px',  
           }}>
+            
             <img src={`https://image.tmdb.org/t/p/w500${actor.profile_path}`} alt={actor.name} style={{
               width: '100%', 
               borderRadius: '8px',  
-            }} />
+            }} /> 
             <p style={{ margin: '10px 0', textAlign: 'center', fontWeight: 'bold' }}>{actor.name}</p>
           </div>
+          </Link>
         ))}
       </div>
       
