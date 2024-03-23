@@ -53,12 +53,6 @@ export default async function MovieDetail({ params }) {
   const movieDetail = data;
   const { title, name, genres, overview, release_date, first_air_date, poster_path, backdrop_path, vote_average, runtime, original_language } = movieDetail;
   const roundedVoteAverage = movieDetail?.vote_average.toFixed(1);
-  const apiConfig = {
-    baseUrl: 'https://api.themoviedb.org/3/movie/',
-    apiKey: '31e1507410b28f1467c4589ed6e2d5e7',
-    originalImage: (imgPath) => `https://image.tmdb.org/t/p/original/${imgPath}`,
-    w500Image: (imgPath) => `https://image.tmdb.org/t/p/w500/${imgPath}`
-}
 
   return (
     <div className="bg-gray-900 min-h-screen text-white">
