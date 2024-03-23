@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default async function CastList({ id }) {
     try {
         const res = await fetch(
@@ -27,7 +28,9 @@ export default async function CastList({ id }) {
                         <a key={i} href={`#`} className="text-gray-900 bg-gradient-to-r from-blue-200 to-gray-200 hover:bg-gradient-to-l hover:from-blue-200 hover:to-gray-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-sm px-5 py-1.5 text-center mb-2">{item.name}</a>
                             ))}
                         </div>
+                <Link key={directorName.id} href={`/movies/${directorName.id}`} passHref>
                 <p>Director: {directorName}</p>
+                </Link>
             </div>
         );
     } catch (error) {

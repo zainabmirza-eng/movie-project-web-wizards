@@ -1,5 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 export default function SimilarMovies({ movieId }) {
   const [movies, setMovies] = useState([]);
@@ -23,10 +24,12 @@ export default function SimilarMovies({ movieId }) {
   return (
     <div className="flex justify-center w-full flex-wrap gap-6">
       {movies.slice(0, displayCount).map((movie) => (
-        <div key={movie.id} className="bg-white shadow-lg rounded-lg p-6 w-64">
-          <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} className="w-full rounded-lg mb-4" />
-          <p className="text-center font-bold">{movie.title}</p>
-        </div>
+        <Link key={movie.id} href={`/movies/${movie.id}`} passHref>
+            <div className="bg-white shadow-lg rounded-lg p-6 w-64">
+              <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} className="w-full rounded-lg mb-4" />
+              <p className="text-center font-bold text-black">{movie.title}</p>
+            </div>
+        </Link>
       ))}
       {movies.length > displayCount && (
         <button onClick={showMore} className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Show More</button>
