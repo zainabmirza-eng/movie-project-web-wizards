@@ -57,7 +57,7 @@ export default async function MovieDetail({ params }) {
   return (
     <div className="container flex flex-wrap justify-center gap-5 p-5 bg-gradient-to-r from-[#000814] from-10% via-[#001d3d] via-30% to-[#000814] to-90% ... text-white">
       <div className="mx-auto p-4">
-        <div className="flex flex-col md:flex-row items-start md:space-x-6 max-w-6xl mx-auto mb-12">
+        <div className="flex flex-col md:flex-row items-start md:space-x-6 max-w-6xl mx-auto">
         <div className="md:w-1/2 p-4 flex justify-evenly items-start sm:w-1/4 mt-1">
   <div className="max-w-md">
     <figure className='relative max-w-sm transition-all duration-300 cursor-pointer filter grayscale-0 hover:grayscale'>
