@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default async function CastList({ id }) {
     try {
         const res = await fetch(
@@ -19,15 +21,23 @@ export default async function CastList({ id }) {
                 directorName = 'Director not found';
             }
         }
+
         const uniqueCasts = [...new Set(casts)]; // Remove duplicates from casts array
+
         return (
-            <div className="casts">
-                        <div className="flex flex-wrap gap-2">
-                            {uniqueCasts.map((item, i) => (
-                        <a key={i} href={`#`} className="text-gray-900 bg-gradient-to-r from-blue-200 to-gray-200 hover:bg-gradient-to-l hover:from-blue-200 hover:to-gray-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-sm px-5 py-1.5 text-center mb-2">{item.name}</a>
-                            ))}
-                        </div>
-                <p>Director: {directorName}</p>
+            <div className="">
+                <div className="flex flex-wrap gap-2">
+                    {uniqueCasts.map((item, i) => (
+                        <Link key={i} href={`/actors/${item.id}`} passHref>
+                            <p className="text-white hover:text-gray-900 border-2 border-gray-400 bg-gradient-to-r from-[#1b263b] to-gray-800 hover:bg-gradient-to-l hover:from-[#1b263b] hover:to-gray-300 focus:ring-4 focus:outline-none focus:ring-[#778da9] dark:focus:ring-teal-700 font-medium rounded-md text-sm px-5 py-1.5 text-center mb-2">
+                                {item.name}
+                            </p>
+                        </Link>
+                    ))}
+                </div>
+                <div className="mt-4">
+                <p><span className="font-bold text-[#e0fbfc]">Director:</span> {directorName}</p>
+                </div>
             </div>
         );
     } catch (error) {
