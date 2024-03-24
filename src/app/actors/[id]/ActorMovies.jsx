@@ -38,7 +38,7 @@ export default function ActorMovies({ actorName }) {
                 className="w-full rounded-t-lg "
               />
               <div className="p-4">
-                <p className="text-lg font-bold text-center text-white font-semibold">{movie.title}</p>
+                <p className="text-lg text-center text-white font-semibold">{movie.title}</p>
                 <p className="text-gray-100 text-center ">{movie.release_date}</p>
               </div>
             </div>
