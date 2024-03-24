@@ -1,4 +1,5 @@
 import Link from "next/link"
+
 export default async function Search({ params }) {
   const movieSearch = params.search
   const res = await fetch(
@@ -14,7 +15,7 @@ export default async function Search({ params }) {
             <div key={item.id} className="overflow-hidden">
               <img
                 className="w-48 rounded-sm  px-2 py-6  transform transition duration-500 hover:scale-110 "
-                src={`https://image.tmdb.org/t/p/original/${item.poster_path}`}
+                src={`https://image.tmdb.org/t/p/original/${item.poster_path}` } alt="poster"
               />
             </div>
           </Link>
