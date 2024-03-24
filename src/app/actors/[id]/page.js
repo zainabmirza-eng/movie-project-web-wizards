@@ -25,7 +25,7 @@ export default async function Actorcard({ params }) {
               <img
                 src={`https://image.tmdb.org/t/p/original/${actorinfo.profile_path}`}
                 alt={actorinfo.name}
-                className="rounded-lg shadow-md max-w-sm bg-white rounded-xl"
+                className="rounded-lg shadow-md max-w-sm bg-white"
               />
             </figure>
           </div>
