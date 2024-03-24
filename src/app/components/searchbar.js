@@ -12,12 +12,12 @@ export default function Search() {
     router.push(`/search/${value}`)
   }
   return (
-    <div className="flex flex-1 items-center justify-center p-6">
+    <div className="flex flex-1 items-center justify-center p-6 bg-gradient-to-r from-[#000814] from-10% via-[#001d3d] via-30% to-[#000814] to-90% ...">
       <div className="w-full max-w-lg">
         <form onSubmit={handleSubmit} className="mt-5 sm:flex sm:items-center">
           <input
             className="inline w-full rounded-md border border-gray-300 bg-transparent py-2 pl-3 pr-3 leading-5 placeholder-gray-500 focus:border-indigo-500 focus:placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm"
-            placeholder="Keyword"
+            placeholder="Search for Movies"
             type="search"
             autofocus=""
             value={value}
