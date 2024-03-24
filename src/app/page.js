@@ -10,7 +10,7 @@ async function Home() {
   return (
     <div>
       <Search />
-      <div className="container flex flex-wrap justify-center gap-5 p-5 bg-gradient-to-r from-[#000814] from-10% via-[#001d3d] via-30% to-[#000814] to-90% ...">
+      <div className="px-20 container grid grid-cols-7 grid-rows-5 gap-4  bg-gradient-to-r from-[#000814] from-10% via-[#001d3d] via-30% to-[#000814] to-90% ... ">
         {movies.results.map((item) => (
           <Link key={item.id} href={`./movies/${item.id}`}>
             <div className="group relative">
@@ -21,7 +21,9 @@ async function Home() {
                   src={`https://image.tmdb.org/t/p/original/${item.poster_path}`}
                 />
                 <div className="absolute rounded-xl inset-0 bg-[#1b263b] bg-opacity-80 text-white font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <p className="text-center font-semibold uppercase">{item.original_title}</p>
+                  <p className="text-center font-semibold uppercase">
+                    {item.original_title}
+                  </p>
                 </div>
               </div>
             </div>
@@ -29,7 +31,7 @@ async function Home() {
         ))}
       </div>
     </div>
-  );
+  )
 }
 
 export default Home
