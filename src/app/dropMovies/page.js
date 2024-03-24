@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 export default function GenreMoviesPage() {
     const [movies, setMovies] = useState([]);
@@ -33,8 +34,8 @@ export default function GenreMoviesPage() {
             </select>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {movies.map(movie => (
-                    <div key={movie.id} className="bg-white border border-gray-200 rounded-md shadow-md overflow-hidden">
-                        <img
+                        <Link key={movie.id} href={`./movies/${movie.id}`}>
+                            <img
                             src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                             alt={movie.title}
                             className="w-80 h-30 object-cover"
@@ -43,7 +44,7 @@ export default function GenreMoviesPage() {
                             <h2 className="text-lg font-semibold mb-2">{movie.title}</h2>
                             {/* Add additional movie details here if needed */}
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </div>
