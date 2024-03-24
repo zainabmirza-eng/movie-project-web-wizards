@@ -35,7 +35,7 @@ export default function ActorMovies({ actorName }) {
               <img
                 src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                 alt={movie.title}
-                className="w-full rounded-t-lg "
+                className="w-full rounded-t-lg"
               />
               <div className="p-4">
                 <p className="text-lg text-center text-white font-semibold">{movie.title}</p>

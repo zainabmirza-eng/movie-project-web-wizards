@@ -6,6 +6,7 @@ export default function Navbar() {
 
     return (
         <div className="bg-blue-500 mx-auto flex w-full justify-between px-4 py-2 text-sm">
+            
             <section className="flex items-center gap-10">
                 {/* logo */}
                 <h2>logo</h2>

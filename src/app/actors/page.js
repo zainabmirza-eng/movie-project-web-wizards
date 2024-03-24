@@ -1,21 +1,23 @@
-'use client'
+"use client"
 
-import Link from 'next/link';
-import React, { useState, useEffect } from 'react';
+import Link from "next/link"
+import React, { useState, useEffect } from "react"
 
 export default function Actors() {
-  const [actors, setActors] = useState([]);
+  const [actors, setActors] = useState([])
 
   useEffect(() => {
-    fetch('https://api.themoviedb.org/3/person/popular?api_key=31e1507410b28f1467c4589ed6e2d5e7')
+    fetch(
+      "https://api.themoviedb.org/3/person/popular?api_key=31e1507410b28f1467c4589ed6e2d5e7",
+    )
       .then((res) => res.json())
       .then((data) => {
-        setActors(data.results);
+        setActors(data.results)
       })
       .catch((error) => {
-        console.error('Error fetching data:', error);
-      });
-  }, []); // Empty dependency array ensures the effect runs only once on component mount
+        console.error("Error fetching data:", error)
+      })
+  }, []) // Empty dependency array ensures the effect runs only once on component mount
 
   return (
     <div className="container mx-auto px-4 py-8 bg-gradient-to-r from-[#000814] via-[#001d3d] to-[#000814] text-white">
