@@ -44,7 +44,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold text-cyan-950 text-center ">Zainab Mirza</h3>
             <div className="flex justify-center space-x-4 mt-2">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/LinkedIn_icon_circle.svg/108px-LinkedIn_icon_circle.svg.png" alt="" className="size-6" />
-                <a href="https://www.linkedin.com/in/" target="_blank" className="text-blue-900 hover:text-blue-700">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/zainab-mirza-6b1003265" target="_blank" className="text-blue-900 hover:text-blue-700">LinkedIn</a>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/300px-GitHub_Invertocat_Logo.svg.png" alt="" className="size-6 mx-0" />
                 <a href="https://github.com/zainabmirza-eng" target="_blank" className="text-black hover:text-gray-700">GitHub</a>
             </div>
