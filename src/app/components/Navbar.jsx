@@ -15,7 +15,7 @@ export default async function  Navbar() {
         <div className="bg-gradient-to-r from-purple-500 to-blue-500 mx-auto flex w-full justify-between px-4 py-2 text-sm font-roboto">
     <section className="flex items-center gap-10">
         {/* logo */}
-        <h2 className="text-white font-bold text-lg">My Cinema</h2>
+        <h2 className="text-white font-bold text-lg">Logo</h2>
         <div className="flex items-center gap-4 transition-all">
             <Link href="/">
                 <p className="relative group px-3 py-4 translate-all cursor-pointer">
