@@ -20,50 +20,28 @@ export default function Actors() {
   }, []) // Empty dependency array ensures the effect runs only once on component mount
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        width: "100%",
-        flexDirection: "row",
-        flexWrap: "wrap",
-        gap: "20px",
 
-        padding: "50px",
-      }}
-    >
-      {actors.map((actor) => (
-        <Link key={actor.id} href={`./actors/${actor.id}`}>
-          <div
-            key={actor.id}
-            style={{
-              backgroundColor: "lavender",
-              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-              borderRadius: "8px",
-              padding: "20px",
-              width: "200px",
-            }}
-          >
-            <img
-              src={`https://image.tmdb.org/t/p/w500${actor.profile_path}`}
-              alt={actor.name}
-              style={{
-                width: "100%",
-                borderRadius: "8px",
-              }}
-            />
-            <p
-              style={{
-                margin: "10px 0",
-                textAlign: "center",
-                fontWeight: "bold",
-              }}
-            >
-              {actor.name}
-            </p>
-          </div>
-        </Link>
-      ))}
+    <div className="container mx-auto px-4 py-8 bg-gradient-to-r from-[#000814] via-[#001d3d] to-[#000814] text-white">
+      <h1 className="text-3xl font-bold mb-4 text-center">Actors</h1>
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-10">
+        {actors.map((actor) => (
+          <Link key={actor.id} href={`./actors/${actor.id}`}>
+            <div className="mb-4 bg-white bg-opacity-30 shadow-lg rounded-lg border-2 border-[#778da9] relative">
+              <img
+                src={`https://image.tmdb.org/t/p/w500${actor.profile_path}`}
+                alt={actor.name}
+                className="w-full rounded-t-lg"
+              />
+              <div className="">
+                <h2 className="text-lg font-semibold mb-6 mt-4 text-center">{actor.name}</h2>
+              </div>
+              <div className="absolute inset-x-0 bottom-0 mb-0 h-15 bg-white bg-opacity-30 shadow-lg rounded-b-lg"></div>
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
-  )
-}
+  );
+        } 
+     
+ 

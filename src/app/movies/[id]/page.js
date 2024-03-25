@@ -85,11 +85,24 @@ export default async function MovieDetail({ params }) {
   return (
     <div className="relative container flex flex-wrap justify-center gap-5 p-20 bg-gradient-to-r from-[#000814] from-10% via-[#001d3d] via-30% to-[#000814] to-90% ... text-white">
       <div className="mx-auto p-4">
+ 
+       <img
+  className="absolute left-0 top-0 object-cover opacity-20"
+  src={`https://image.tmdb.org/t/p/original/${backdrop_path}`}
+  alt="backdrop"
+  style={{ 
+    maskImage: "linear-gradient(to bottom, transparent 0%, black 90%, transparent 100%)",
+    WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 90%, transparent 100%)"
+  }}
+/>
+
+ 
         <img
           className="absolute opacity-20 object-cover left-0 top-0"
           src={`https://image.tmdb.org/t/p/original/${backdrop_path}`}
           alt="backdrop"
         />
+ 
         <div className="relative flex flex-col md:flex-row items-start md:space-x-6 max-w-6xl mx-auto">
           <div className="md:w-1/2 p-4 flex justify-evenly items-start sm:w-1/4 mt-1 relative">
             <div className="max-w-md relative">
@@ -110,7 +123,11 @@ export default async function MovieDetail({ params }) {
                     >
                       <button className="py-2 px-4 scale-110 transform transition duration-500 hover:scale-150  ">
                         {" "}
+ 
+                        <FaRegCirclePlay style={{ fontSize: "40px" }} />{" "}
+ 
                         <FaRegCirclePlay />{" "}
+ 
                       </button>
                     </a>
                   )}
