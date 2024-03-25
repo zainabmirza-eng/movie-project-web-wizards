@@ -12,9 +12,9 @@ export default function GenreMoviesPage() {
     };
 
     useEffect(() => {
-        if (selectedOption === '') return; // Do nothing if no option is selected
+        const option = selectedOption || 'popular';
 
-        fetch(`https://api.themoviedb.org/3/movie/${selectedOption}?api_key=31e1507410b28f1467c4589ed6e2d5e7`)
+        fetch(`https://api.themoviedb.org/3/movie/${option}?api_key=31e1507410b28f1467c4589ed6e2d5e7`)
             .then(response => response.json())
             .then(data => {
                 setMovies(data.results);
