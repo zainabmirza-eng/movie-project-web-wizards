@@ -23,6 +23,7 @@ export default function Navbar() {
     setShowGenres(!showGenres)
   }
 
+
   return (
     <div className="sticky z-20 top-0 start-0 bg-gradient-to-r from-[#000814] from-10% via-[#001d3d] via-30% to-[#000814] to-90% ... ">
       <img
@@ -32,6 +33,8 @@ export default function Navbar() {
       />
 
       <section className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+ 
+ 
         <div className="flex items-center gap-4 transition-all">
           <div
             className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"

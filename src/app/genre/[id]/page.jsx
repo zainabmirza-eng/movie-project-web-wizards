@@ -7,11 +7,11 @@ export default async function Genre({params}) {
     const genres = data.results;
     console.log(genres)
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-10">
+        <div className="grid grid-cols-5 justify-center gap-5 p-8 bg-gradient-to-r from-[#000814] from-10% via-[#001d3d] via-30% to-[#000814] to-90% ... text-white">
     {genres.map((genre) => (
-        <div key={genre.id} className="rounded-lg shadow-md border border-gray-200 p-4">
-            <h1 className="text-lg font-semibold mb-2">{genre.original_title}</h1>
-            <img src={`https://image.tmdb.org/t/p/w500${genre.poster_path}`} className="w-full h-auto rounded-lg" alt={genre.original_title} />
+        <div key={genre.id} className="items-center rounded-lg shadow-md border-white p-4 hover:shadow-cyan-900 hover:border-cyan-800 border-2 border-transparent hover:font-bold">
+        <img src={`https://image.tmdb.org/t/p/w500${genre.poster_path}`} className="rounded-lg shadow-2xl" alt={genre.original_title} />
+        <h1 className="text-lg font-semibold p-4 text-center">{genre.original_title}</h1>
         </div>
     ))}
 </div>
