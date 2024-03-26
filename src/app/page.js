@@ -9,8 +9,7 @@ async function Home() {
 
   return (
     <div>
-      <Search />
-      <div className="px-20 container grid grid-cols-7 grid-rows-5 gap-4  bg-gradient-to-r from-[#000814] from-10% via-[#001d3d] via-30% to-[#000814] to-90% ... ">
+      <div className="flex flex-wrap gap-5 items-center justify-center p-6 bg-gradient-to-r from-[#000814] from-10% via-[#001d3d] via-30% to-[#000814] to-90% ...">
         {movies.results.map((item) => (
           <Link key={item.id} href={`./movies/${item.id}`}>
             <div className="group relative">
@@ -32,6 +31,5 @@ async function Home() {
       </div>
     </div>
   )
-}
-
-export default Home
+            }
+export default Home;
