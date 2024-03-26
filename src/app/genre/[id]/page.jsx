@@ -14,6 +14,12 @@ export default async function Genre({params}) {
         <h1 className="text-lg font-semibold p-4 text-center">{genre.original_title}</h1>
         </div>
     ))}
+
+
+
+
+
+    
 </div>
 
 

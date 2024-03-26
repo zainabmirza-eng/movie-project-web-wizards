@@ -95,14 +95,6 @@ export default async function MovieDetail({ params }) {
     WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 90%, transparent 100%)"
   }}
 />
-
- 
-        <img
-          className="absolute opacity-20 object-cover left-0 top-0"
-          src={`https://image.tmdb.org/t/p/original/${backdrop_path}`}
-          alt="backdrop"
-        />
- 
         <div className="relative flex flex-col md:flex-row items-start md:space-x-6 max-w-6xl mx-auto">
           <div className="md:w-1/2 p-4 flex justify-evenly items-start sm:w-1/4 mt-1 relative">
             <div className="max-w-md relative">
@@ -125,9 +117,6 @@ export default async function MovieDetail({ params }) {
                         {" "}
  
                         <FaRegCirclePlay style={{ fontSize: "40px" }} />{" "}
- 
-                        <FaRegCirclePlay />{" "}
- 
                       </button>
                     </a>
                   )}
