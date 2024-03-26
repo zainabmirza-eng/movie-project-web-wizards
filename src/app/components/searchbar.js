@@ -12,7 +12,7 @@ export default function Search() {
     router.push(`/search/${value}`)
   }
   return (
-    <div className="flex flex-1 items-center justify-center p-6 bg-gradient-to-r from-[#000814] from-10% via-[#001d3d] via-30% to-[#000814] to-90% ...">
+    <div className="flex flex-1 items-center justify-center p-6 bg-transparent">
       <div className="w-full max-w-lg">
         <form onSubmit={handleSubmit} className="mt-5 sm:flex sm:items-center">
           <input
