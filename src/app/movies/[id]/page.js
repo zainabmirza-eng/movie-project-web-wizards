@@ -83,7 +83,7 @@ export default async function MovieDetail({ params }) {
   const roundedVoteAverage = movieDetail?.vote_average.toFixed(1)
 
   return (
-    <div className="relative container flex flex-wrap justify-center gap-5 p-20 bg-gradient-to-r from-[#000814] from-10% via-[#001d3d] via-30% to-[#000814] to-90% ... text-white">
+    <div className="relative container flex flex-wrap justify-center gap-5 p-20 pt-10 bg-gradient-to-r from-[#000814] from-10% via-[#001d3d] via-30% to-[#000814] to-90% ... text-white">
       <div className="mx-auto p-4">
  
        <img

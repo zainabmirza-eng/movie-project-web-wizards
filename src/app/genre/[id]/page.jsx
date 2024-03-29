@@ -1,16 +1,16 @@
-import Link from "next/link"
+import Link from "next/link";
 
 export default async function Genre({ params }) {
-  const id = params.id
+  const id = params.id;
 
   const res = await fetch(
-    `https://api.themoviedb.org/3/discover/movie?api_key=31e1507410b28f1467c4589ed6e2d5e7&with_genres=${id}`,
-  )
-  const data = await res.json()
-  const genres = data.results
-  console.log(genres)
+    `https://api.themoviedb.org/3/discover/movie?api_key=31e1507410b28f1467c4589ed6e2d5e7&with_genres=${id}`
+  );
+  const data = await res.json();
+  const genres = data.results;
+  console.log(genres);
   return (
-    <div className="grid grid-cols-5 justify-center gap-5 p-8 bg-gradient-to-r from-[#000814] from-10% via-[#001d3d] via-30% to-[#000814] to-90% ... text-white">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center gap-5 p-8 bg-gradient-to-r from-[#000814] from-10% via-[#001d3d] via-30% to-[#000814] to-90% ... text-white">
       {genres.map((genre) => (
         <div
           key={genre.id}
@@ -19,15 +19,15 @@ export default async function Genre({ params }) {
           <Link href={`/movies/${genre.id}`}>
             <img
               src={`https://image.tmdb.org/t/p/w500${genre.poster_path}`}
-              className="rounded-lg shadow-2xl"
+              className="rounded-lg shadow-2xl w-full"
               alt={genre.original_title}
             />
-            <h1 className="text-lg font-semibold p-4 text-center">
-              {genre.original_title}
-            </h1>
           </Link>
+          <h1 className="text-lg font-semibold p-4 text-center">
+            {genre.original_title}
+          </h1>
         </div>
       ))}
     </div>
-  )
+  );
 }
